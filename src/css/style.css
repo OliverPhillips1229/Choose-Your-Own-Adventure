@@ -6,10 +6,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: 'src/assets/images/noise-texture.png';
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .game-container {
@@ -42,6 +38,17 @@ body {
     text-shadow: 2px 2px 5px rgb(255, 0, 0);
 }
 
+.play-text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    text-align: center;
+    max-height: 30vh;  /* Limit height for scrolling */
+}
 button {
     font-family: 'Press Start 2P', cursive;;
     background-color: #202020e5;
