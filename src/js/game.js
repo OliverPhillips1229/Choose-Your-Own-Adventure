@@ -44,24 +44,29 @@ function showInventory() {
     displayGameMessage("You haven't found any items yet.")
 }
 
-// Function to display a message on the screen
+// Function to display a message on the screen // needs fixes
 function displayGameMessage(message) {
     const messageContainer = document.createElement('p');
     messageContainer.textContent = message;
 
-    // Append the message at the bottom of the screen
+    // Get the play-text container and ensure it's visible
     const playText = document.querySelector('.play-text');
-    playText.appendChild(messageContainer);
-    
-    // Ensure the message scrolls down if necessary
-    playText.scrollTop = gameText.scrollHeight;
+
+    if (playText) {
+        playText.appendChild(messageContainer);
+
+        // Ensure the message scrolls down if necessary
+        playText.scrollTop = playText.scrollHeight;
+    } else {
+        console.error("play-text container is not found!");
+    }
 }
+
 
 // Function for the first game scene (e.g., inside the haunted warehouse)
 function insideWarehouse() {
     // Display the first set of choices or interactions here
     displayGameMessage("You hear footsteps in the distance. What do you do?");
-    
     // Create buttons for first choice
     let investigateButton = document.createElement('button');
     investigateButton.textContent = 'Investigate the noise';

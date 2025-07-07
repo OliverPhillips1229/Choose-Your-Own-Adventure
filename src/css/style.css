@@ -38,17 +38,19 @@ body {
     text-shadow: 2px 2px 5px rgb(255, 0, 0);
 }
 
-.play-text{
+.play-text {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 10px;
-    font-size: 1em;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    color: white;
     text-align: center;
+    overflow-y: auto;  /* Allow scrolling if the content is too long */
     max-height: 30vh;  /* Limit height for scrolling */
+    display: block;  /* Ensure it's displayed */
 }
+
 button {
     font-family: 'Press Start 2P', cursive;;
     background-color: #202020e5;
