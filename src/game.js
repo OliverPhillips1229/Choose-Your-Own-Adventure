@@ -17,3 +17,25 @@ function showMainMenu() {
     inventoryButton.onclick = showInventory;
     document.querySelector('.game-text').appendChild(inventoryButton);
 }
+
+// Function to start game
+function startAdventure() {
+    // Hide main menu
+
+    // Start playing background music
+
+    // First part of the game
+}
+
+// Function for inventory
+function showInventory() {
+    // Show inventory
+}
+
+// Function to display first scene
+function insideWarehouse() {
+    // Transition into the game
+}
+
+// Initialize the game
+window.onload = showMainMenu;
