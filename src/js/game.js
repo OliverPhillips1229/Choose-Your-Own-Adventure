@@ -74,16 +74,59 @@ function insideWarehouse() {
     document.querySelector('.play-text').appendChild(leaveButton);
 }
 
-// Function for investigating the noise
+/// Function for investigating the noise
 function investigateNoise() {
     displayGameMessage("You walk toward the noise and find a dark shadow lurking in the corner...");
-    // Add more game logic here (e.g., branching choices or consequences)
+
+    // Further logic for what happens when investigating the noise
+    displayGameMessage("What will you do next?");
+    
+    // Create new choices, for example, attack the shadow or run.
+    let attackButton = document.createElement('button');
+    attackButton.textContent = 'Attack the shadow';
+    attackButton.onclick = attackShadow;
+    document.querySelector('.play-text').appendChild(attackButton);
+
+    let runButton = document.createElement('button');
+    runButton.textContent = 'Run away!';
+    runButton.onclick = runAway;
+    document.querySelector('.play-text').appendChild(runButton);
 }
 
-// Function for leaving the warehouse
+// Function for leaving the warehouse (Game Over)
 function leaveWarehouse() {
     displayGameMessage("You decide to leave the warehouse, but something feels off... You’ve walked into danger.");
-    // Add more branching logic from here (e.g., game ending or further choices)
+    displayGameMessage("You have died. Game Over.");
+
+    // Create a Restart button to reload the game
+    let restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart Game';
+    restartButton.onclick = restartGame;
+    document.querySelector('.play-text').appendChild(restartButton);
+}
+
+// Function to restart the game
+function restartGame() {
+    window.location.reload(); // Reload the page to restart the game
+}
+
+// Function for attacking the shadow (Further branching logic)
+function attackShadow() {
+    displayGameMessage("You attack the shadow, but it's a monster! You’ve been defeated.");
+    displayGameMessage("You have died. Game Over.");
+    let restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart Game';
+    restartButton.onclick = restartGame;
+    document.querySelector('.play-text').appendChild(restartButton);
+}
+
+// Function for running away from the shadow (Another branch)
+function runAway() {
+    displayGameMessage("You run away, but the monster catches up with you. You have died.");
+    let restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart Game';
+    restartButton.onclick = restartGame;
+    document.querySelector('.play-text').appendChild(restartButton);
 }
 
 
