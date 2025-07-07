@@ -8,6 +8,16 @@ body {
     overflow: hidden;
 }
 
+.game-play-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+} 
+
 .game-container {
     display: flex;
     flex-direction: column;

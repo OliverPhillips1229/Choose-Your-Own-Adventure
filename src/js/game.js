@@ -22,6 +22,7 @@ function showMainMenu() {
 function startAdventure() {
     // Hide the main menu and show the game text
     document.querySelector('.game-container').style.display = 'none';  // Hide main menu
+    document.querySelector('.game-play-container').style.display = 'block'; // BROKEN
     document.querySelector('.play-text').style.display = 'block'; // Show game text
 
     // Start playing the background music (if not already playing)
