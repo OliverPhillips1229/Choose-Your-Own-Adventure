@@ -21,20 +21,29 @@ function showMainMenu() {
 // Function to start game
 function startAdventure() {
     // Hide main menu
+    document.querySelector('.game-text').style.display = 'none';
 
     // Start playing background music
+    let audio = document.getElementById('bg-music');
+    if (audio.paused) {
+        audio.play();
+    }
 
     // First part of the game
+    alert("The adventure begins! Get ready for the horror!");
+    insideWarehouse();
 }
 
 // Function for inventory
 function showInventory() {
     // Show inventory
+    alert("You haven't found any items yet.")
 }
 
 // Function to display first scene
 function insideWarehouse() {
     // Transition into the game
+    alert("You're now inside the warehouse, strange noises and smells fill the air...");
 }
 
 // Initialize the game
