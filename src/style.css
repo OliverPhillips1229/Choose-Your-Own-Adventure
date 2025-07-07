@@ -1,0 +1,65 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    color: #c9c9c9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: 'src/assets/images/noise-texture.png';
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.game-logo {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 50px;
+    filter: brightness(1.5) contrast(1.5);
+}
+
+.game-text h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    margin-bottom: 20px;
+}
+
+.game-text p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;;
+    background-color: #202020e5;
+    color: rgb(255, 0, 0);
+    font-size: 1.2em;
+    padding: 20px 40px;
+    border: 2px solid rgb(225, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(200, 0, 0, 0.7);
+}
+
+button:hover {
+    background-color: rgb(139, 0, 0);
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px rgba(200, 0, 0, 600);
+}
+
+audio {
+    display: none;
+}
+
