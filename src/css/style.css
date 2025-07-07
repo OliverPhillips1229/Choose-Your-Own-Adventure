@@ -1,11 +1,46 @@
-
 body {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #000000;
-    color: #c9c9c9;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    /* prevents scrolling */
+}
+
+.game-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.game-wrapper {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 90vw;
 }
 
 .gameplay-container {
@@ -16,7 +51,7 @@ body {
     height: 100vh;
     text-align: center;
     position: relative;
-} 
+}
 
 .game-container {
     display: flex;
@@ -43,26 +78,44 @@ body {
 }
 
 .game-text p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 1em;
     margin-bottom: 30px;
     text-shadow: 2px 2px 5px rgb(255, 0, 0);
 }
 
 .play-text {
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
     width: 100%;
+    max-width: 800px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
-    overflow-y: auto;  /* Allow scrolling if the content is too long */
-    max-height: 30vh;  /* Limit height for scrolling */
-    display: block;  /* Ensure it's displayed */
+    overflow-y: auto;
+    max-height: 30vh;
 }
 
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+
+
 button {
-    font-family: 'Press Start 2P', cursive;;
+    font-family: 'Press Start 2P', cursive;
+    ;
     background-color: #202020e5;
     color: rgb(255, 0, 0);
     font-size: 1.2em;
@@ -83,3 +136,6 @@ audio {
     display: none;
 }
 
+* {
+    box-sizing: border-box;
+}
