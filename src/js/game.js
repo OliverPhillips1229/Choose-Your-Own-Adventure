@@ -290,12 +290,23 @@ function enterNextRoom() {
 
 function Flashlight() {
     const playText = document.querySelector('.play-text');
-    // set scene
-    currentScene = Flashlight
-    // CLearing scene
+    currentScene = Flashlight;
     clearPlayText();
+
+    addToInventory("Flashlight");
     displayGameMessage("You grab the flashlight. It flickers to life, barely illuminating the room...");
-    // Add more logic here later
+    displayGameMessage("You head back to the main room where you entered...")
+    displayGameMessage("As you sweep it across the entrance, you notice something odd...");
+    displayGameMessage("A panel on the wall near the main door looks slightly discolored.");
+
+    const inspectButton = document.createElement('button');
+    inspectButton.textContent = "Inspect the panel";
+    inspectButton.onclick = findSwitch;
+    playText.appendChild(inspectButton);
+}
+
+function findSwitch(){
+    //needs writing
 }
 
 function Scurries() {
@@ -331,6 +342,9 @@ function Scurries() {
     playText.appendChild(restartButton);
 }
 
+function finalEscape() {
+    //needs writing
+}
 // Function for running away from the warehouse
 function runAway() {
     // set scene
