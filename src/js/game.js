@@ -158,30 +158,30 @@ function investigateNoise() {
 
 // Function for leaving the warehouse (Game Over)
 function leaveWarehouse() {
-    // set scene
     currentScene = leaveWarehouse;
-    // Clearing screen
+    const playText = document.querySelector('.play-text');
     clearPlayText();
+
     displayGameMessage("You turn toward the exit, but the door is locked. As you turn back to venture further you are attacked by a masked figure weilding a hatchet.");
     displayGameMessage("You have died. Game Over.");
 
     const obituary = document.createElement('div');
     obituary.style.marginTop = "20px";
     obituary.innerHTML = `
-    <h3>📰 Obituary</h3>
-    <p><strong>You:</strong> Runner. Not a thinker.</p>
-    <p><strong>Cause of Death:</strong> Turned your back on danger. Literally.</p>
-    <p><strong>Last Words:</strong> "Nope. I'm out."</p>
-    <p><strong>Funeral Detail:</strong> Casket closed due to excessive hatchet marks.</p>
-`;
+        <h3>📰 Obituary</h3>
+        <p><strong>You:</strong> Runner. Not a thinker.</p>
+        <p><strong>Cause of Death:</strong> Turned your back on danger. Literally.</p>
+        <p><strong>Last Words:</strong> "Nope. I'm out."</p>
+        <p><strong>Funeral Detail:</strong> Casket closed due to excessive hatchet marks.</p>
+    `;
     playText.appendChild(obituary);
 
 
     // Create a Restart button to reload the game
-    let restartButton = document.createElement('button');
+    const restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
     restartButton.onclick = restartGame;
-    document.querySelector('.play-text').appendChild(restartButton);
+    playText.appendChild(restartButton);
 }
 
 // Function to restart the game
