@@ -133,3 +133,57 @@ audio {
 * {
     box-sizing: border-box;
 }
+
+/* Phones */
+@media (max-width: 600px) {
+  .game-text h1 {
+    font-size: 1.5em;
+  }
+
+  .game-text p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  .game-logo {
+    max-width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .play-text {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .game-text h1 {
+    font-size: 2em;
+  }
+
+  .game-text p {
+    font-size: 1em;
+  }
+
+  .game-logo {
+    max-width: 400px;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 18px 35px;
+  }
+}
