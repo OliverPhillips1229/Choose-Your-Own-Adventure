@@ -25,3 +25,22 @@ To run the project on your own machine:
 git clone URL
 cd flashlight-fear
 open index.html
+
+## 📝 Attributions
+
+- Font: [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) by CodeMan38 – Licensed under [SIL Open Font License](https://scripts.sil.org/OFL)
+- Music: "Last Minutes" by Etienne Roussel – Sourced from Epidemic Sound
+- Game logo: Custom generated image made by ChatGPT
+
+## 🛠 Technologies Used
+
+- HTML5  
+- CSS3  
+- JavaScript
+
+## 🔮 Next Steps
+
+- Add sound effects for key moments  
+- Mobile responsiveness improvements  
+- More branching paths and endings  
+- Inventory system with item-based decision logic
