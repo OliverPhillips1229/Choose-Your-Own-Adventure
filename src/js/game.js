@@ -165,6 +165,18 @@ function leaveWarehouse() {
     displayGameMessage("You turn toward the exit, but the door is locked. As you turn back to venture further you are attacked by a masked figure weilding a hatchet.");
     displayGameMessage("You have died. Game Over.");
 
+    const obituary = document.createElement('div');
+    obituary.style.marginTop = "20px";
+    obituary.innerHTML = `
+    <h3>📰 Obituary</h3>
+    <p><strong>You:</strong> Runner. Not a thinker.</p>
+    <p><strong>Cause of Death:</strong> Turned your back on danger. Literally.</p>
+    <p><strong>Last Words:</strong> "Nope. I'm out."</p>
+    <p><strong>Funeral Detail:</strong> Casket closed due to excessive hatchet marks.</p>
+`;
+    playText.appendChild(obituary);
+
+
     // Create a Restart button to reload the game
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
@@ -306,7 +318,7 @@ function Flashlight() {
     playText.appendChild(inspectButton);
 }
 
-function findSwitch(){
+function findSwitch() {
     //needs writing
 }
 
@@ -353,6 +365,18 @@ function runAway() {
     // Clearing screen
     clearPlayText();
     displayGameMessage("You run toward the exit, but the door is locked and the key doesn't fit. As you turn back to venture further you are attacked by a masked figure weilding a hatchet. You have died.");
+    const obituary = document.createElement('div');
+    obituary.style.marginTop = "20px";
+    obituary.innerHTML = `
+    <h3>📰 Obituary</h3>
+    <p><strong>You:</strong> Tried to outrun the inevitable.</p>
+    <p><strong>Cause of Death:</strong> Tripped over your own cowardice.</p>
+    <p><strong>Last Words:</strong> "This was a mistake!"</p>
+    <p><strong>Grave Inscription:</strong> Should’ve stayed and fought. Maybe.</p>
+`;
+    playText.appendChild(obituary);
+
+
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
     restartButton.onclick = restartGame;
