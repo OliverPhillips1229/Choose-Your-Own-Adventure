@@ -16,10 +16,7 @@ This game was born out of a love for classic horror and a desire to bring cinema
 ## 🚀 Getting Started
 
 ### ▶️ Play the Game  
-[🔗 Live Game Link](URL)
-
-### 📋 Planning Docs  
-[📄 Game Flowchart / Wireframe / Planning](ERL)
+[🔗 Live Game Link](https://oliverphillips1229.github.io/Choose-Your-Own-Adventure/)
 
 ### 🔧 Run Locally  
 To run the project on your own machine:
