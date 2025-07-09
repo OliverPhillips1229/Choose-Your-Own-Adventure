@@ -39,6 +39,8 @@ function startAdventure() {
     insideWarehouse();
 }
 
+// Function for adding to inventory
+
 // Function for inventory
 function showInventory() {
     // Show inventory
@@ -66,6 +68,7 @@ function displayGameMessage(message) {
 
 // Function for the first game scene (e.g., inside the haunted warehouse)
 function insideWarehouse() {
+    // Clearing screen
     // Display the first set of choices or interactions here
     displayGameMessage("You hear footsteps in the distance. What do you do?");
     // Create buttons for first choice
@@ -82,6 +85,7 @@ function insideWarehouse() {
 
 /// Function for investigating the noise
 function investigateNoise() {
+    // Clearing screen
     displayGameMessage("You walk toward the noise and find a dark shadow lurking in the corner...");
 
     // Further logic for what happens when investigating the noise
@@ -101,6 +105,7 @@ function investigateNoise() {
 
 // Function for leaving the warehouse (Game Over)
 function leaveWarehouse() {
+    // Clearing screen
     displayGameMessage("You decide to leave the warehouse, but something feels off... You’ve walked into danger.");
     displayGameMessage("You have died. Game Over.");
 
@@ -118,6 +123,7 @@ function restartGame() {
 
 // Function for attacking the shadow (Further branching logic)
 function attackShadow() {
+    // Clearing screen
     displayGameMessage("You attack the shadow, but it's a monster! You’ve been defeated.");
     displayGameMessage("You have died. Game Over.");
     let restartButton = document.createElement('button');
@@ -128,6 +134,7 @@ function attackShadow() {
 
 // Function for running away from the shadow (Another branch)
 function runAway() {
+    // Clearing screen
     displayGameMessage("You run away, but the monster catches up with you. You have died.");
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
