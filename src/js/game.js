@@ -360,28 +360,37 @@ function finalEscape() {
 }
 // Function for running away from the warehouse
 function runAway() {
-    // set scene
+    // Set scene
     currentScene = runAway;
-    // Clearing screen
+
+    // Grab and clear playText
+    const playText = document.querySelector('.play-text');
     clearPlayText();
-    displayGameMessage("You run toward the exit, but the door is locked and the key doesn't fit. As you turn back to venture further you are attacked by a masked figure weilding a hatchet. You have died.");
+
+    // Game over messages
+    displayGameMessage("You run toward the exit, but the door is locked and the key doesn't fit.");
+    displayGameMessage("As you turn back to venture further, you are attacked by a masked figure wielding a hatchet.");
+    displayGameMessage("You have died. Game Over.");
+
+    // Funny obituary
     const obituary = document.createElement('div');
     obituary.style.marginTop = "20px";
     obituary.innerHTML = `
-    <h3>📰 Obituary</h3>
-    <p><strong>You:</strong> Tried to outrun the inevitable.</p>
-    <p><strong>Cause of Death:</strong> Tripped over your own cowardice.</p>
-    <p><strong>Last Words:</strong> "This was a mistake!"</p>
-    <p><strong>Grave Inscription:</strong> Should’ve stayed and fought. Maybe.</p>
-`;
+        <h3>📰 Obituary</h3>
+        <p><strong>You:</strong> Tried to outrun the inevitable.</p>
+        <p><strong>Cause of Death:</strong> Tripped over your own cowardice.</p>
+        <p><strong>Last Words:</strong> "This was a mistake!"</p>
+        <p><strong>Grave Inscription:</strong> Should’ve stayed and fought. Maybe.</p>
+    `;
     playText.appendChild(obituary);
 
-
-    let restartButton = document.createElement('button');
+    // Restart button
+    const restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
     restartButton.onclick = restartGame;
-    document.querySelector('.play-text').appendChild(restartButton);
+    playText.appendChild(restartButton);
 }
+
 
 // Initialize the game
 window.onload = showMainMenu;
