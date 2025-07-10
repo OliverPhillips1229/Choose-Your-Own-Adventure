@@ -32,7 +32,8 @@ open index.html
 (https://fonts.google.com/specimen/Press+Start+2P) 
 by CodeMan38 – Licensed under [SIL Open Font License]
 (https://scripts.sil.org/OFL)
-- Music: "Last Minutes" by Etienne Roussel – Sourced from Epidemic Sound
+- Music: "Last Minutes" by Etienne Roussel
+ – Sourced from Epidemic Sound
 - Game logo: Custom generated image made by ChatGPT
 
 ## 🛠 Technologies Used
