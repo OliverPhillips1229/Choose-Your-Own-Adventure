@@ -320,6 +320,16 @@ function Flashlight() {
 
 function findSwitch() {
     //needs writing
+    const playText = document.querySelector('.play-text');
+    currentScene = findSwitch; // saves scene
+    clearPlayText(); // clears scene
+
+    displayGameMessage("You pry the panel open and reveal a hidden switch.");
+    displayGameMessage("You flip it. Somewhere in the distance, a lock disengages with a metallic clunk.");
+
+    const restartButton = document.createElement('button');
+    restartButton.onclick = finalEscape; 
+    playText.appendChild(returnButton);
 }
 
 function Scurries() {
@@ -357,6 +367,28 @@ function Scurries() {
 
 function finalEscape() {
     //needs writing
+    const playText = document.querySelector('.play-text'); 
+    currentScene = finalEscape; // saves scene
+    clearPlayText(); // clears the scene
+
+    displayGameMessage("You return to the main door.");
+    displayGameMessage("With the switch flipped, the door opens smoothly with a hiss of release pressure.");
+    displayGameMessage("You're free.");
+
+    const winMessage = document.createElement('div');
+    winMessage.style.marginTop = "20px";
+    winMessage.innerHTML = `
+    <h3>You have escaped!</h3>
+    <p><strong>Ending Unlocked</strong> The Light Bearer</p>
+    <p><strong>Final Words:</strong>"Never ignore the obvious."</p>
+    <p><strong>Inventory at the end:</strong>${inventory.join(", ")}</p>
+    `
+    playText.appendChild(winMessage);
+
+    const restartButton = document.createElement('button');
+    restartButton.textContent = "Play again?";
+    restartButton.onclick = restartGame;
+    playText.appendChild(restartButton);
 }
 // Function for running away from the warehouse
 function runAway() {
