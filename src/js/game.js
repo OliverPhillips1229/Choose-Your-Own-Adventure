@@ -319,16 +319,16 @@ function Flashlight() {
 }
 
 function findSwitch() {
-    //needs writing
     const playText = document.querySelector('.play-text');
-    currentScene = findSwitch; // saves scene
-    clearPlayText(); // clears scene
+    currentScene = findSwitch;
+    clearPlayText();
 
     displayGameMessage("You pry the panel open and reveal a hidden switch.");
     displayGameMessage("You flip it. Somewhere in the distance, a lock disengages with a metallic clunk.");
 
-    const restartButton = document.createElement('button');
-    restartButton.onclick = finalEscape; 
+    const returnButton = document.createElement('button');
+    returnButton.textContent = "Return to Main Door";
+    returnButton.onclick = finalEscape;
     playText.appendChild(returnButton);
 }
 
