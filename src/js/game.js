@@ -42,7 +42,7 @@ function startAdventure() {
 
     // Display the first game scene directly on the screen
     displayGameMessage("The adventure begins! Get ready for the horror...");
-    displayGameMessage("You're now inside the haunted warehouse, and strange noises fill the air...");
+    displayGameMessage("You're now inside the haunted warehouse, and strange noises fill the air... You pull out your flashlight but it's dead...");
 
     // Call the first game scene function
     insideWarehouse();
