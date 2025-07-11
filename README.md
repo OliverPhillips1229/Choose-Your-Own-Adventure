@@ -1,6 +1,6 @@
 # 🕯️ Flashlight Fear
 
-![Flashlight Fear Screenshot](flashlight-fear-game-logo.png)  
+![Flashlight Fear Screenshot](src/assets/images/flashlight-fear-game-logo.png)  
 *An eerie decision-based game made with HTML, CSS, and JavaScript*
 
 ---
