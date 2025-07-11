@@ -22,7 +22,7 @@ This game was born out of a love for classic horror and a desire to bring cinema
 To run the project on your own machine:
 
 ```bash
-git clone URL
+git clone https://oliverphillips1229.github.io/Choose-Your-Own-Adventure/
 cd flashlight-fear
 open index.html
 
