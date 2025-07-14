@@ -35,7 +35,7 @@ function startAdventure() {
 
     // Start playing the background music (if not already playing)
     let audio = document.getElementById('bg-music');
-    audio.volume = 0.5;
+    audio.volume = 0.1;
     if (audio.paused) {
         audio.play();
     }
